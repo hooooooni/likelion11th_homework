@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: "Noto Sans";
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 650px;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+/* nav */
+.service {
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone {
+    padding-right: 10px;
+}
+
+.battery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.percent {
+    padding-right: 10px;
+}
+
+.login {
+    padding-top: 20px;
+}
+
+.friends {
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.item:nth-child(1) {  
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    padding-top: 8px;
+}
+
+.item:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#profile {
+    border-radius: 30%;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.chats {
+    margin-left: 20px;
+}
+
+.times {
+    margin-left: 220px;
+    text-align: center;
+}
+
+.chatCount {
+    color: white;
+    background-color: red;
+    border-radius: 50px;
+    width: 25px;
+    margin: 0 auto;
+}
+
+.item:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item:nth-child(4) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(226, 215, 215);
+    margin-top: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.notification-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.notification-dot2 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 400%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    vertical-align: middle;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
