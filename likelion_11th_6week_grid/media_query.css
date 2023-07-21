@@ -1,0 +1,208 @@
+/* Global -------------------------------------------------*/
+
+@font-face {
+    font-family: "AppleSDGothicNeoB";
+    src: url("../static/fonts/AppleSDGothicNeoB.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "AppleSDGothicNeoB";
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 아래에 container css style을 지정해주세요. */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: #070a07;
+    color: #ff7710;
+}
+
+.po {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.text {
+    color: white;
+}
+
+/* 인스타그램 */
+.it {
+    display: flex;
+    height: 100vh;
+    width: 650px;
+    color: white;
+    flex-direction: column;
+}
+
+.insta {
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-basis: 5px;
+}
+
+.insta:nth-child(1) {
+    background: black;
+    text-align: center;
+}
+
+.insta:nth-child(2) {
+    background: black;
+    flex-grow: 2;
+    align-items: center;
+}
+.insta:nth-child(3) {
+    flex-grow: 20;
+}
+
+.insta:nth-child(6) {
+    flex-grow: 5;
+}
+
+p {
+    font-size: 8px;
+    text-align: center;
+    color: white;
+}
+
+#icon {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    margin-top: 5px;
+}
+
+#big_item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#icon_1 {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+#icon2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#dongguk {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#post {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+#angle-left {
+    margin: 10px;
+}
+
+#post_image {
+    object-fit: fill
+}
+
+#id {
+    font-size: 3px;
+}
+
+.small {
+    font-size: 5px;
+}
+
+.small2 {
+    font-size: 10px;
+}
+
+.mini_profile {
+    width: 100%;
+    margin-left: 10px;
+}
+
+#save {
+    margin-left: auto;
+}
+
+#profile {
+    border-radius: 50%;
+}
+
+/* 인스타그램 끝 */
+
+
+.animation {
+    animation-duration: 1s;
+    animation-name: animation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation {
+    0% {
+        transform: scale(2.0);
+    }
+
+    100% {
+        transform: rotate(4.0);
+    }
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    border: 15px solid white;
+}
+
+.item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-auto-flow: column dense;
+    border: 15px solid white;
+}
+
+.item:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border: 15px solid white;
+}
