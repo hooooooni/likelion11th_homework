@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/7ff02238ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="service">
+                <div class="phone">SKT</div>
+                <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="time">18:43</div>
+            <div class="battery">
+                <div class="percent">100%</div>
+                <div class="icon">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="hello">Welcome to Hoeun's KAKAO</div>
+            <div class="information">If you have a kakao Account, <br>log in with your email or <br>phone number.</div>
+        </div>
+        <div class="item">
+            <form action="Friends.html" id="login-form">
+                <input type="text" name="user_id" id="user_id" placeholder="Email or phone number">
+                <br><input type="password" name="user_pw" id="user_pw" placeholder="password">
+                <br><input id="login" type="button" value="Log in" style="background-color: yellow" onclick="check()">
+            </form>
+        </div>
+        <div class="item">
+            <p>Find Kakao Account or Password</p>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            var userId = document.getElementById("user_id").value;
+            var userPw = document.getElementById("user_pw").value;
+
+            if (userId === "") {
+                alert("이 입력란을 작성하세요.");
+                return;
+            }
+            if (userPw === "") {
+                alert("이 입력란을 작성하세요.");
+                return;
+            }
+
+            document.getElementById("login-form").submit();
+        }
+    </script>
+</body>
+</html>
