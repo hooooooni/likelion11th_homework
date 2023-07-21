@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./Friends.css">
+  <script src="https://kit.fontawesome.com/7ff02238ce.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Space+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 스플래시 이미지 스타일링 */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .splash-screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 650px;
+      height: 100vh;
+      background-image: url("../res/kakaotalk.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="splash-screen"></div>
+
+  <!-- splash 이후 화면 -->
+  <div class="container">
+    <section class="item">
+        <div class="service">
+            <div class="phone">SKT</div>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="time">18:43</div>
+        <div class="battery">
+            <div class="percent">100%</div>
+            <div class="icon">
+                <i class="fa-solid fa-battery-full"></i>
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+        </div>
+    </section>
+    <section class="item">
+        <div class="friends">Friends</div>
+          <div class="bar">
+            <i class="fa fa-search"></i>
+            <i class="fa-solid fa-music"></i>
+            <i class="fa-solid fa-gear"></i>
+          </div>
+    </section>
+
+    <section class="item">
+      <i class="fa fa-info-circle"></i>
+      <div class="information">Friends Names Display</div>
+      <i class="fa fa-angle-right"></i>
+    </section>
+
+    <section class="item">
+      <img id="profile" src="../res/profile.jpg" width="100px" height="100px"> 
+      <div class="name">hoeun</div>
+    </section>
+
+
+    <section class="item">
+      <hr width="630px" color="gray">
+    </section>
+
+    <section class="item">
+      <div>Channel</div>
+      <i class="fa fa-angle-up"></i>
+    </section>
+
+    <section class="item">
+      <div class="channal">
+        <img id="profile2" src="../res/kakao_logo.png" width="50px" height="50px"> 
+        <div class="name2">Channel</div>
+      </div>
+      <div class="channal2">
+        <div>2</div>
+        <i class="fa fa-angle-right"></i>
+      </div>
+    </section>
+    <section class="item">
+      <a href="../Friends/Friends.html">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a href="../ChatsList/ChatsList.html">
+        <i class="fa-regular fa-comment"></i>
+      </a>
+      <a href="../Finds/Finds.html">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="../More/More.html"><i class="fa-solid fa-ellipsis"></i></a>
+    </section>
+  <div>
+
+
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var splashScreen = document.querySelector('.splash-screen');
+        var container = document.querySelector('.container');
+
+        splashScreen.style.display = 'none';
+        container.style.display = 'block';
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>

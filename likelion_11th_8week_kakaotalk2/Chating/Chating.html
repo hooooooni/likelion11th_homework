@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./Chating.css">
+    <script src="https://kit.fontawesome.com/7ff02238ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <section class="item">
+            <div class="service">
+                <div class="phone">SKT</div>
+                <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="time">18:43</div>
+            <div class="battery">
+                <div class="percent">100%</div>
+                <div class="icon">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+            </div>
+        </section>
+        <section class="item">
+            <a href="../ChatsList/ChatsList.html"><i class="fa-solid fa-angle-left"></i></a>
+            <div class="kakao">Kakao</div>
+            <div class="more">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+
+        <section class="item">
+            <div class="date">Tuseday, June 30, 2020</div>
+        </section>
+
+        <section class="item">
+            <img class="kakaoLogo" src="../res/kakao_logo.png">
+            <div class="outgoing">
+                <div class="content">
+                    <div clas="sendName">KaKao</div>
+                    <div class="text">Please Check My KAKAO<br> Account Info</div>
+                </div>
+                <div class="times">21:27</div>
+            </div>
+        </section>
+
+        <section class="item">
+            <div class="incoming">
+                <div class="content2">
+                    <div class="times">21:28</div>
+                    <div class="text2">No!!!</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="item">
+                <i class="fa-solid fa-plus"></i>
+                <div class="input-area">
+                    <input class="input" type="text" placeholder="Write a Message">
+                    <i class="fa-solid fa-smile"></i>
+                    <button class="send-button"><i class="fa-solid fa-angle-up"></i></button>
+                </div>
+        </section>
+    </body>
+
+    <script>
+        const inputElement = document.querySelector('.input');
+        const plusIcon = document.querySelector('.fa-solid.fa-plus');
+        const smileIcon = document.querySelector('.fa-solid.fa-smile');
+        const sendButton = document.querySelector('.send-button');
+
+        inputElement.addEventListener('focus', () => {
+            plusIcon.style.display = 'none';
+            smileIcon.style.display = 'none';
+            sendButton.style.display = 'none';
+            inputElement.style.width = '250%';
+        });
+
+        inputElement.addEventListener('blur', () => {
+            if (!inputElement.value.trim()) {
+                plusIcon.style.display = 'inline';
+                smileIcon.style.display = 'inline';
+                sendButton.style.display = 'inline';
+                inputElement.style.width = '500px';
+            }
+        });
+    </script>
+</body>
+</html>
