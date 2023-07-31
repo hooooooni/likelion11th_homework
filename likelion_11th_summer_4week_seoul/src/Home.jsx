@@ -34,17 +34,19 @@ const Home = () => {
 
     // 통합대기환경등급에 따라 글씨색 변경 함수
     const getTextColor = (grade) => {
-      switch (grade) {
-        case '좋음':
-          return 'green';
-        case '나쁨':
-          return 'red';
-        case '점검 중':
-          return '-';
-        default:
-          return 'white';
+      if (!grade || grade === "점검 중") {
+        return { color: 'white' };
       }
-    };  
+    
+      switch (grade) {
+        case "좋음":
+          return { color: 'green' };
+        case "나쁨":
+          return { color: 'red' };
+        default:
+          return { color: 'white' };
+      }
+    };
   
   return (
     <HomeContainer>
@@ -73,7 +75,7 @@ const Home = () => {
                 </TableTd>
                 <TableTd style={{ color: sortedData.includes(lion) ? 'yellow' : '' }}>{lion.PM10}</TableTd>
                 <TableTd>{lion.PM25}</TableTd>
-                <TableTd style={{ color: getTextColor(lion.IDEX_NM) }}>{lion.IDEX_NM}</TableTd>
+                <TableTd style={getTextColor(lion.IDEX_NM)}>{lion.IDEX_NM || "-"}</TableTd>
                 <TableTd>{lion.IDEX_MVL}</TableTd>
               </tr>
             ))}
