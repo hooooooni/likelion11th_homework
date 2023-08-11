@@ -21,8 +21,16 @@ export default function MovieModal({
     vote_average,
     setModalOpen,
 }) {
+    const modalRef = useRef(null);
+
+    const handleModalBackgroundClick = (event) => {
+        if (modalRef.current === event.target) {
+            setModalOpen(false);
+        }
+    };
+
     return (
-        <ModalContainer onClick={() => setModalOpen(false)}>
+        <ModalContainer ref={modalRef} onClick={handleModalBackgroundClick}>
             <Modal>
                 <ModalCloseBtn onClick={() => setModalOpen(false)}>X</ModalCloseBtn>
                 <ModalPosterImg
